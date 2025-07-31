@@ -67,6 +67,7 @@ body {
 }
 
 .cards {
+    padding-top: 20px;
     display: flex;
     flex-wrap: nowrap;           /* Impede que os cards quebrem linha */
     justify-content: flex-start; /* Alinha os cards no início */
