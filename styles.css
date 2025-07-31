@@ -157,3 +157,49 @@ footer {
         justify-content: center;  /* Centraliza os cards */
     }
 }
+
+.exemplo {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.exemplo h2, .exemplo p {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+/* Estilos para desktop */
+@media screen and (min-width: 1024px) {
+    .exemplo {
+        width: 80%; /* Ajuste o tamanho para o desktop */
+        margin: 0 auto; /* Centraliza a classe no centro da tela */
+    }
+
+    .exemplo h2 {
+        font-size: 2rem; /* Tamanho do título ajustado para desktop */
+        margin-bottom: 15px; /* Espaçamento entre o título e o texto */
+    }
+
+    .exemplo p {
+        font-size: 1rem; /* Tamanho do parágrafo ajustado para desktop */
+        margin-bottom: 20px; /* Espaçamento entre o texto e o rodapé */
+    }
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 1024px) {
+    .exemplo {
+        width: 90%; /* Ajuste o tamanho para dispositivos móveis */
+        margin: 0 auto; /* Centraliza a classe no centro da tela */
+    }
+
+    .exemplo h2 {
+        font-size: 1.8rem; /* Tamanho do título ajustado para dispositivos móveis */
+        margin-bottom: 10px; /* Espaçamento entre o título e o texto */
+    }
+
+    .exemplo p {
+        font-size: 0.95rem; /* Tamanho do parágrafo ajustado para dispositivos móveis */
+        margin-bottom: 15px; /* Espaçamento entre o texto e o rodapé */
+    }
+}
