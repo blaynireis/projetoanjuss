@@ -9,13 +9,13 @@ body {
     font-family: Helvetica, sans-serif;
     background-color: #f0f0f0;
     color: #333;
-    padding-top: 20px; /* Ajuste no padding após remover a top-bar */
+    padding-top: 0px; /* Ajuste no padding após remover a top-bar */
 }
 
 /* Menu principal */
 .menu-container {
     background-color: #1e1e1e;
-    padding: 1px 2px;
+    padding: 10px 20px;
     position: relative;
 }
 
