@@ -1,118 +1,117 @@
-body {
-  background-color: #f0f0f0;
-  color: #333;
-  font-family: Helvetica, sans-serif;
-  padding: 20px;
-}
-
-h1 {
-  color: #0051ff;
-  font-size: 36px;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    font-family: Helvetica, sans-serif;
+    background-color: #f0f0f0;
     color: #333;
-}
-
-.top-bar {
-      position: fixed;  /* fixa no topo */
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #333; /* cor de fundo */
-      color: white;
-      padding: 10px 20px;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000; /* garante que fique sobre outros elementos */
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    .top-bar a {
-      color: white;
-      text-decoration: none;
-      margin-left: 15px;
-      font-weight: bold;
-    }
-
-    .top-bar a:hover {
-      text-decoration: underline;
-    }
-
-    /* Dá um espaçamento no conteúdo para não ficar escondido atrás da top bar */
-    body {
-      margin: 0;
-      padding-top: 50px; /* altura da top bar */
-    }
-
-
-.menu {
+    padding-top: 70px; /* espaço para a top-bar fixa */
+  }
+  
+  /* Top Bar */
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .top-bar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+  }
+  
+  .top-bar a:hover {
+    text-decoration: underline;
+  }
+  
+  .top-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Menu principal */
+  .menu-container {
     background-color: #1e1e1e;
-    padding: 13px 0;
-}
-
-.menu ul {
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .menu ul {
     display: flex;
     justify-content: center;
     list-style: none;
-}
-
-.menu li {
-    margin: 0 30px;
-}
-
-.menu a {
-    color: #ffffff;
+    gap: 30px;
+  }
+  
+  .menu a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s;
-}
-
-.menu a:hover {
+  }
+  
+  .menu a:hover {
     color: #ff9900;
-}
-
-.banner img {
+  }
+  
+  /* Banner */
+  .banner img {
     width: 100%;
     height: auto;
     max-height: 450px;
     object-fit: cover;
-}
-
-.vitrine {
+  }
+  
+  /* Vitrine */
+  .vitrine {
     text-align: center;
     padding: 40px 20px;
-}
-
-.vitrine h2 {
+  }
+  
+  .vitrine h2 {
     font-size: 32px;
     margin-bottom: 30px;
-}
-
-.cards {
+  }
+  
+  .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-}
-
-.card {
+  }
+  
+  .card {
     width: 220px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -120,28 +119,78 @@ body {
     padding: 15px;
     text-align: center;
     background-color: #f9f9f9;
-}
-
-.card img {
+  }
+  
+  .card img {
     width: 100%;
     height: auto;
     border-radius: 4px;
-}
-
-.card h3 {
+  }
+  
+  .card h3 {
     margin: 15px 0 5px;
     font-size: 18px;
-}
-
-.card p {
+  }
+  
+  .card p {
     font-size: 14px;
     color: #666;
-}
-
-footer {
+  }
+  
+  /* Rodapé */
+  footer {
     background-color: #1e1e1e;
     color: #fff;
     text-align: center;
     padding: 20px 10px;
     font-style: italic;
-}
+  }
+  
+  /* RESPONSIVIDADE */
+  @media (max-width: 768px) {
+    .top-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .top-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .menu ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: #1e1e1e;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px;
+    }
+  
+    .menu ul.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+      max-width: 320px;
+    }
+  
+    .banner img {
+      max-height: 300px;
+    }
+  }
+  
