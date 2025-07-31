@@ -180,14 +180,15 @@
     }
   
     .cards {
-      flex-direction: column;
-      align-items: center;
-    }
+        display: flex;
+        overflow-x: auto; /* ativa rolagem horizontal */
+        gap: 15px;
+      }
   
     .card {
-      width: 90%;
-      max-width: 320px;
-    }
+        flex: 0 0 70%; /* ocupa 70% da largura da tela */
+        min-width: 220px; /* mantém largura mínima */
+      }
   
     .banner img {
       max-height: 300px;
