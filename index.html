@@ -1,75 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Virtual - Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja Virtual - Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<div class="top-bar">
+  <!-- Topo com links -->
+  <div class="top-bar">
     <div class="logo">PROJETO ANJUSS</div>
-    <nav>
+    <nav class="top-links">
       <a href="https://www.anjuss.com.br/">Site Oficial</a>
       <a href="https://www.anjuss.com.br/institucional/sobre-a-empresa">Sobre a Anjuss</a>
       <a href="https://www.anjuss.com.br/fale-conosco">Contato</a>
     </nav>
   </div>
 
-    <!-- Menu de Navegação -->
+  <!-- Menu principal com botão responsivo -->
+  <header class="menu-container">
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
     <nav class="menu">
-        <ul>
-            <li><a href="https://www.anjuss.com.br/">Fazer Acontecer</a></li>
-            <li><a href="https://www.anjuss.com.br/">Gostar de Estar</a></li>
-            <li><a href="https://www.anjuss.com.br/">Melhoria Contínua</a></li>
-            <li><a href="https://www.anjuss.com.br/">Capacidade de Adaptação</a></li>
-        </ul>
+      <ul>
+        <li><a href="#">Fazer Acontecer</a></li>
+        <li><a href="#">Gostar de Estar</a></li>
+        <li><a href="#">Melhoria Contínua</a></li>
+        <li><a href="#">Capacidade de Adaptação</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Banner Principal -->
-    <section class="banner">
-        <img src="banner-time.png" alt="Banner Principal">
-    </section>
+  <!-- Banner -->
+  <section class="banner">
+    <img src="banner-time.png" alt="Banner Principal" />
+  </section>
 
-    <!-- Vitrine da Equipe -->
-    <section class="vitrine">
-        <h2>A equipe:</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="Leandro.jpeg" alt="Pessoa 1">
-                <h3>Leandro - Coordenador</h3>
-                <p>Fazer acontecer: Na Anjuss, 'Fazer acontecer' 
-                    significa transformar ideias em ação com iniciativa, 
-                    responsabilidade e foco em resultados concretos.</p>
-            </div>
-            <div class="card">
-                <img src="Blayni.jpeg" alt="Pessoa 2">
-                <h3>Blayni - Analista</h3>
-                <p>Gostar de Estar: Um ambiente onde o bem-estar, a 
-                    colaboração e a leveza tornam o trabalho um lugar
-                     onde queremos estar todos os dias.</p>
-            </div>
-            <div class="card">
-                <img src="Maria.jpeg" alt="Pessoa 3">
-                <h3>Maria - Assistente</h3>
-                <p>Melhoria Contínua: Sempre há espaço para evoluir,
-                    por isso, a melhoria contínua está no nosso jeito de pensar,
-                    agir e crescer juntos todos os dias.</p>
-            </div>
-            <div class="card">
-                <img src="Adri.jpeg" alt="Pessoa 4">
-                <h3>Adriele - Assistente</h3>
-                <p>Capacidade de Adaptação: O lema é enfrentar as mudanças como 
-                    oportunidades de evoluir.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Vitrine -->
+  <section class="vitrine">
+    <h2>A equipe:</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="Leandro.jpg" alt="Pessoa 1" />
+        <h3>Leandro - Coordenador</h3>
+        <p>Fazer acontecer: Na Anjuss, 'Fazer acontecer' significa transformar ideias em ação com iniciativa, responsabilidade e foco em resultados concretos.</p>
+      </div>
+      <div class="card">
+        <img src="Blayni.jpg" alt="Pessoa 2" />
+        <h3>Blayni - Analista</h3>
+        <p>Gostar de Estar: Um ambiente onde o bem-estar, a colaboração e a leveza tornam o trabalho um lugar onde queremos estar todos os dias.</p>
+      </div>
+      <div class="card">
+        <img src="Maria.jpeg" alt="Pessoa 3" />
+        <h3>Maria - Assistente</h3>
+        <p>Melhoria Contínua: Sempre há espaço para evoluir, por isso, a melhoria contínua está no nosso jeito de pensar, agir e crescer juntos todos os dias.</p>
+      </div>
+      <div class="card">
+        <img src="Adriele.jpg" alt="Pessoa 4" />
+        <h3>Adriele - Assistente</h3>
+        <p>Capacidade de Adaptação: O lema é enfrentar as mudanças como oportunidades de evoluir.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <p><em>O e-commerce é essencial para ampliar o alcance e a competitividade das empresas nos dias atuais.</em></p>
-    </footer>
+<!-- Vitrine 2 -->
+<section class="vitrine">
+    <h2>Ser Anjuss é:</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Evoluir</h3>
+        <p>Evoluir junto com a empresa é crescer em sintonia com seus valores e objetivos.
+            Significa aprender continuamente, superar desafios e buscar melhorias a cada dia.
+            É construir uma trajetória sólida com colaboração, comprometimento e inovação.
+            Quando a empresa avança, cada colaborador também se desenvolve e se fortalece.</p>
+      </div>
+      <div class="card">
+        <h3>Superar</h3>
+        <p>Superar é enfrentar desafios com coragem e transformar obstáculos em oportunidades.
+            É manter a determinação mesmo diante das dificuldades e seguir em frente com resiliência.
+            Significa aprender com os erros e crescer a cada experiência vivida.
+            Superar é acreditar no potencial coletivo e nunca desistir dos nossos objetivos.</p>
+      </div>
+      <div class="card">
+        <h3>Aprender</h3>
+        <p>Aprender é estar aberto ao novo e transformar conhecimento em crescimento.
+            É reconhecer que cada experiência traz uma oportunidade de evolução.
+            Significa ouvir, praticar, questionar e melhorar continuamente.
+            Aprender é o primeiro passo para inovar e construir resultados duradouros.</p>
+      </div>
+      <div class="card">
+        <h3>Ser</h3>
+        <p>Ser é agir com autenticidade, alinhando atitudes aos próprios valores.
+            É reconhecer a própria essência e contribuir de forma verdadeira com o coletivo.
+            Significa assumir responsabilidades com integridade e empatia.
+            Ser é a base para construir relações sólidas e uma cultura forte dentro da empresa.</p>
+      </div>
+    </div>
+  </section>
+
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p><em>O e-commerce é essencial para ampliar o alcance e a competitividade das empresas nos dias atuais.</em></p>
+  </footer>
+
+  <!-- Script para abrir o menu mobile -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu ul');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
 
 </body>
 </html>
