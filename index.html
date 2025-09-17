@@ -3,130 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loja Virtual - Landing Page</title>
+  <title>Nossa Cultura - Anjuss</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Menu principal com botão responsivo -->
-  <header class="menu-container">
-    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-    <nav class="menu">
-      <ul>
-        <li><a href="https://www.anjuss.com.br/">Crescer e Voar Juntos</a></li>
-        <li><a href="https://www.anjuss.com.br/">Fazer Acontecer</a></li>
-        <li><a href="https://www.anjuss.com.br/">Gostar de Estar</a></li>
-        <li><a href="https://www.anjuss.com.br/">Melhoria Contínua</a></li>
-        <li><a href="https://www.anjuss.com.br/">Capacidade de Adaptação</a></li>
-        <li><a href="https://www.anjuss.com.br/">Respeito e voz a todos</a></li>
-      </ul>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">ANJUSS</a>
+      <nav class="menu">
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+        <ul id="menu-list">
+          <li><a href="#equipe">A Equipe</a></li>
+          <li><a href="#valores">Nossos Valores</a></li>
+          <li><a href="#em-acao">Valores em Ação</a></li>
+          <li><a href="https://www.anjuss.com.br/" target="_blank">Visite a Loja</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Banner -->
-  <section class="banner">
-    <img src="banner-main.jpg" alt="Banner Principal" />
-  </section>
+  <main>
+    <section class="banner">
+      <img src="banner-main.jpg" alt="Banner Principal da equipe Anjuss" />
+    </section>
 
-  <!-- Vitrine -->
-  <section class="vitrine">
-    <h2>A equipe:</h2>
-    <h3>Fazer Acontecer</h3>
-    <div class="cards">
-      <div class="card">
-        <img src="Leo.jpg" alt="Pessoa 1" />
-        <h3>Leandro - Coordenador</h3>
-        <p>Fazer acontecer: Transformar ideias em ação com iniciativa, responsabilidade e foco em resultados.</p>
-      </div>
-      <div class="card">
-        <img src="Blayni.jpg" alt="Pessoa 2" />
-        <h3>Blayni - Analista</h3>
-        <p>Melhoria contínua: é sempre buscar otimizar processos e resultados.
-            A ideia é aprender com cada experiência e aplicar esses aprendizados no dia a dia.</p>
-      </div>
-      <div class="card">
-        <img src="Maria.jpeg" alt="Pessoa 3" />
-        <h3>Maria - Assistente</h3>
-        <p>Respeito e voz a todos e a cada um: é reconhecer a importância de cada ser,
-            Onde todos têm a liberdade de expressar suas ideias.</p>
-      </div>
-      <div class="card">
-        <img src="Adriele.jpg" alt="Pessoa 4" />
-        <h3>Adriele - Assistente</h3>
-        <p>Capacidade de Adaptação: é saber lidar com as mudanças e ver nelas uma chance para crescer, aprender e melhorar.</p>
-      </div>
-      <div class="card">
-        <img src="Mariama.jpeg" alt="Pessoa 5" />
-        <h3>Mariama - Assistente</h3>
-        <p>Gostar de estar: é se sentir pertencente a um lugar onde há propósito, onde cada passo do dia a dia é valorizado, desde as pequenas ações como empresa até as grandes decisões tomadas em conjunto.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vitrine 2 -->
-  <section class="vitrine">
-    <h2>Ser Anjuss é:</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Voar Juntos</h3>
-            <p>É viver o propósito de crescer e voar juntos, com coragem para fazer acontecer,
-                vontade de evoluir sempre, adaptabilidade diante dos desafios, alegria em pertencer e um
-                 profundo respeito que dá voz a todos e a cada um. <br> <strong>Leandro</strong></p>
+    <section id="equipe" class="vitrine">
+      <div class="container">
+        <h2>A Equipe</h2>
+        <p class="subtitle">Pessoas que transformam ideias em resultados.</p>
+        <div class="cards-grid">
+          <div class="card">
+            <img src="Leo.jpg" alt="Foto de Leandro" />
+            <h3>Leandro</h3>
+            <span>Coordenador</span>
+            <p><strong>Fazer acontecer:</strong> Transformar ideias em ação com iniciativa, responsabilidade e foco em resultados.</p>
           </div>
-      <div class="card">
-        <h3>Evoluir</h3>
-        <p>Evoluir junto com a empresa é crescer em sintonia com seus valores e objetivos.
-            Significa aprender continuamente, superar desafios e buscar melhorias a cada dia.
-            É construir uma trajetória sólida com parceria, comprometimento e inovação.
-            Quando a empresa avança, cada colaborador também se desenvolve e se fortalece. <br> <strong>Blayni</strong></p>
+          <div class="card">
+            <img src="Blayni-final.jpeg" alt="Foto de Blayni" />
+            <h3>Blayni</h3>
+            <span>Analista</span>
+            <p><strong>Melhoria contínua:</strong> Buscar otimizar processos e resultados, aprendendo com cada experiência.</p>
+          </div>
+          <div class="card">
+            <img src="Maria.jpeg" alt="Foto de Maria" />
+            <h3>Maria</h3>
+            <span>Assistente</span>
+            <p><strong>Respeito e voz a todos e a cada um:</strong> É reconhecer a importância de cada ser, Onde todos têm a liberdade de expressar suas ideias.</p>
+          </div>
+          <div class="card">
+            <img src="Adriele.jpg" alt="Foto de Adriele" />
+            <h3>Adriele</h3>
+            <span>Assistente</span>
+            <p><strong>Capacidade de Adaptação:</strong> É saber lidar com as mudanças e ver nelas uma chance para crescer, aprender e melhorar.</p>
+          </div>
+          <div class="card">
+            <img src="Mariama.jpeg" alt="Foto de Mariama" />
+            <h3>Mariama</h3>
+            <span>Assistente</span>
+            <p><strong>Gostar de estar:</strong> É se sentir pertencente a um lugar onde há propósito, onde cada passo é valorizado, desde as pequenas ações como empresa até as grandes decisões tomadas em conjunto.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Vestir a camisa e fazer acontecer!</h3>
-        <p>É tomar a frente, buscar soluções e não esperar que o sucesso caia do céu.
-            Cada esforço conta, e a dedicação é o que move a equipe para a conquista.
-            Quando todos se unem com o mesmo objetivo, não há limite para o que se pode alcançar.
-            A ação é o primeiro passo para transformar visão em realidade. <br> <strong>Maria</strong></p>
-      </div>
-      <div class="card">
-        <h3>Determinado</h3>
-        <p>É estar disposto a encarar os desafios de frente e transformar as mudanças em aprendizado.
-          É se movimentar mesmo na incerteza, buscando crescer junto com a empresa e com o que cada situação ensina. <br> <strong>Adriele</strong></p>
-      </div>
-      <div class="card">
-        <h3>Pertencer</h3>
-        <p>Pertencer à Anjuss é fazer parte de um grupo onde cada um traz o melhor de si, inspirando a melhoria contínua.
-          É um ambiente de respeito e harmonia que nos une na busca por um objetivo comum: crescer juntos para um futuro melhor. <br> <strong>Mariama</strong></p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-<div class="exemplo">
-<h2>Valor em Ação:</h2>
-<p>Apesar das adversidades enfrentadas, nossa equipe manteve um espírito de união e determinação ao longo de todo o processo. 
-  Mesmo com a redução no número de colaboradores, o comprometimento de todos foi essencial para superar os desafios diários. 
-  A colaboração constante entre os membros e a capacidade de se adaptar rapidamente às mudanças permitiram que cada tarefa fosse 
-  realizada com eficiência. A resiliência e o foco na meta do e-commerce foram fatores cruciais para que, mesmo com as dificuldades,
-   conseguíssemos alcançar os resultados esperados. A conquista é um reflexo direto do esforço conjunto, onde cada integrante foi fundamental 
-   para o sucesso da equipe. Tudo isso alinhado aos valores da empresa "Fazer Acontecer" e "Capacidade de Adaptação", que sempre nos 
-   motivou a transformar desafios em oportunidades e a buscar a excelência, independentemente das circunstâncias.</p>
-</div>
-  </section>
+    <section id="valores" class="vitrine bg-light">
+      <div class="container">
+        <h2>Ser Anjuss é...</h2>
+        <p class="subtitle">A essência da nossa cultura em palavras.</p>
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Voar Juntos</h3>
+            <p>É viver o propósito de crescer e voar juntos, com coragem para fazer acontecer, vontade de evoluir sempre, adaptabilidade diante dos 
+              desafios, alegria em pertencer e um profundo respeito que dá voz a todos e a cada um. <br> <strong>- Leandro</strong></p>
+          </div>
+          <div class="card">
+            <h3>Evoluir</h3>
+            <p>Evoluir junto com a empresa é crescer em sintonia com seus valores e objetivos. Significa aprender continuamente, superar desafios e buscar 
+              melhorias a cada dia. Quando a empresa avança, cada colaborador também se desenvolve e se fortalece. <br> <strong>- Blayni</strong></p>
+          </div>
+          <div class="card">
+            <h3>Vestir a camisa</h3>
+            <p>É tomar a frente, buscar soluções e não esperar que o sucesso caia do céu. Cada esforço conta, e a dedicação é o que move a equipe para a conquista.
+               Quando todos se unem com o mesmo objetivo, não há limite para o que se pode alcançar. 
+              A ação é o primeiro passo para transformar visão em realidade. <br> <strong>- Maria</strong></p>
+          </div>
+          <div class="card">
+            <h3>Ser Determinado</h3>
+            <p>É estar disposto a encarar os desafios de frente e transformar as mudanças em aprendizado. É se movimentar mesmo na incerteza, buscando
+               crescer junto com a empresa e com o que cada situação ensina. <br> <strong>- Adriele</strong></p>
+          </div>
+          <div class="card">
+            <h3>Pertencer</h3>
+            <p>Pertencer é fazer parte de um grupo onde cada um traz o melhor de si, inspirando a melhoria contínua. É um ambiente de respeito e harmonia 
+              que nos une na busca por um objetivo comum: crescer juntos para um futuro melhor. <br> <strong>- Mariama</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Rodapé -->
+    <section id="em-acao" class="text-section">
+      <div class="container">
+        <h2>Valor em Ação</h2>
+        <p>Apesar das adversidades, nossa equipe manteve um espírito de união e determinação. Com a redução no número de colaboradores, o comprometimento foi essencial para superar os desafios. A colaboração e a capacidade de se adaptar rapidamente permitiram que cada tarefa fosse realizada com eficiência. Essa conquista é um reflexo do nosso esforço conjunto, alinhado aos valores de "Fazer Acontecer" e "Capacidade de Adaptação", que nos motivam a transformar desafios em oportunidades.</p>
+      </div>
+    </section>
+
+  </main>
+
   <footer>
-    <p><em>O e-commerce é essencial para ampliar o alcance e a competitividade das empresas nos dias atuais.</em></p>
+    <div class="container">
+      <p>&copy; 2025 Anjuss E-commerce. Todos os direitos reservados.</p>
+      <p><em>"O e-commerce é essencial para ampliar o alcance e a competitividade das empresas nos dias atuais."</em></p>
+    </div>
   </footer>
 
-  <!-- Script para abrir o menu mobile -->
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu ul');
-
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
