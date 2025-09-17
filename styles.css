@@ -1,205 +1,306 @@
-/* Reset básico */
-* {
+/* 1. VARIÁVEIS E RESET GLOBAL */
+:root {
+    --primary-color: #1e1e1e;
+    --secondary-color: #333;
+    --accent-color: #ff9900;
+    --bg-color: #ffffff;
+    --bg-light-gray: #f7f7f7;
+    --text-color: #555;
+    --text-light: #fff;
+    --border-color: #ddd;
+    --font-family: 'Montserrat', sans-serif;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Helvetica, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    padding-top: 0px; /* Ajuste no padding após remover a top-bar */
-}
-
-/* Menu principal */
-.menu-container {
-    background-color: #1e1e1e;
-    padding: 10px 20px;
-    position: relative;
-}
-
-.menu-toggle {
-    display: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* 2. CABEÇALHO E NAVEGAÇÃO (Sem alterações) */
+  .header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+    text-decoration: none;
+  }
+  
+  .menu-toggle {
+    display: block;
     font-size: 28px;
     background: none;
     border: none;
-    color: white;
+    color: var(--text-light);
     cursor: pointer;
-}
-
-.menu ul {
-    display: flex;
-    justify-content: center;
+    z-index: 1001;
+  }
+  
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 20px 0;
     list-style: none;
-    gap: 30px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.menu a:hover {
-    color: #ff9900;
-}
-
-/* Banner */
-.banner img {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    object-fit: cover;
-}
-
-/* Vitrine */
-.vitrine {
     text-align: center;
-    padding: 40px 20px;
-}
-
-.vitrine h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-.cards {
-    padding-top: 20px;
+  }
+  
+  .menu ul.show {
     display: flex;
-    flex-wrap: nowrap;           /* Impede que os cards quebrem linha */
-    justify-content: flex-start; /* Alinha os cards no início */
-    gap: 15px;
-    overflow-x: auto;            /* Ativa rolagem horizontal */
-    -webkit-overflow-scrolling: touch;  /* Suaviza a rolagem no iOS */
-    padding-bottom: 10px;        /* Espaço para rolagem confortável */
-}
-
-.card {
-    flex: 0 0 auto;          /* Impede que os cards encolham ou estiquem */
-    width: 220px;            /* Tamanho fixo dos cards */
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    padding: 15px;
+  }
+  
+  .menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .menu a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+  
+  /* 3. SEÇÕES PRINCIPAIS (Sem alterações) */
+  .banner {
+    position: relative;
     text-align: center;
-    background-color: #f9f9f9;
-}
-
-.card img {
+    color: var(--text-light);
+  }
+  
+  .banner img {
     width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-.card h3 {
-    margin: 15px 0 5px;
-    font-size: 18px;
-}
-
-.card p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Rodapé */
-footer {
-    background-color: #1e1e1e;
-    color: #fff;
+    max-height: 500px;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+  
+  .banner-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+  
+  .banner-overlay h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .vitrine {
+    padding: 60px 0;
     text-align: center;
-    padding: 20px 10px;
-    font-style: italic;
-}
-
-/* RESPONSIVIDADE */
-@media (max-width: 768px) {
-    /* Menu responsivo (mobile) */
-    .menu ul {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: #1e1e1e;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        padding: 10px 20px;
-    }
-
-    .menu ul.show {
-        display: flex;
-    }
-
+  }
+  
+  .vitrine h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .bg-light {
+    background-color: var(--bg-light-gray);
+  }
+  
+  /* 4. CARDS E CARROSSEL MOBILE - ATUALIZADO */
+  
+  /* Estilos para o Carrossel em Mobile */
+  .cards-grid {
+    display: flex; /* Transforma o container em um layout flexível */
+    overflow-x: auto; /* Permite o scroll horizontal */
+    scroll-snap-type: x mandatory; /* Faz com que o scroll "trave" em um card */
+    -webkit-overflow-scrolling: touch; /* Melhora a fluidez do scroll em iOS */
+    padding: 10px;
+    margin: 0 -10px; /* Compensa o padding para alinhar com o container */
+    gap: 15px; /* Espaçamento entre os cards */
+  }
+  
+  /* Esconde a barra de rolagem visualmente */
+  .cards-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .cards-grid {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .card {
+    flex: 0 0 85%; /* Define a largura de cada card (85% da tela) */
+    scroll-snap-align: start; /* Alinha o início de cada card com o início da área de scroll */
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    border: 3px solid var(--accent-color);
+  }
+  
+  .card h3 {
+    margin-bottom: 5px;
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+  }
+  
+  .card span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+  }
+  
+  /* 5. SEÇÃO DE TEXTO E RODAPÉ (Sem alterações) */
+  .text-section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .text-section p {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  footer {
+    background-color: var(--primary-color);
+    color: #aaa;
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 0.9rem;
+  }
+  
+  footer p:first-child {
+    margin-bottom: 10px;
+    color: var(--text-light);
+  }
+  
+  /* 6. RESPONSIVIDADE (DESKTOP) - ATUALIZADO */
+  
+  /* A partir de 768px de largura, o carrossel se transforma em grade */
+  @media (min-width: 768px) {
     .menu-toggle {
-        display: block;
+      display: none;
     }
-
-    /* Cards em scroll horizontal (mobile) */
-    .cards {
-        display: flex;
-        flex-wrap: nowrap;         /* Impede que os cards quebrem linha */
-        gap: 15px;
-        overflow-x: auto;          /* Ativa rolagem horizontal */
-        -webkit-overflow-scrolling: touch;
+  
+    .menu ul {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      background: none;
+      width: auto;
+      padding: 0;
     }
-
+    
+    .menu a {
+      padding: 10px 20px;
+    }
+    
+    .menu a:hover {
+      background-color: transparent;
+      color: var(--accent-color);
+    }
+  
+    .banner-overlay h1 {
+      font-size: 3rem;
+    }
+  
+    /* Desfaz o carrossel e aplica o layout em grade */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      overflow-x: hidden; /* Garante que não haverá scroll horizontal */
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+    }
+    
     .card {
-        flex: 0 0 auto;       /* Impede que os cards encolham ou estiquem */
-        width: 220px;         /* Tamanho fixo dos cards */
+       /* Reseta a largura do card para que o grid funcione */
+      flex: 1 1 auto;
     }
-}
-
-/* Desktop - Cards centralizados */
-@media (min-width: 769px) {
-    .cards {
-        justify-content: center;  /* Centraliza os cards */
+  
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     }
-}
-
-.exemplo {
-    text-align: center; /* Centraliza o conteúdo horizontalmente */
-    padding: 20px; /* Espaçamento interno */
-}
-
-.exemplo h2, .exemplo p {
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove preenchimento padrão */
-}
-
-/* Estilos para desktop */
-@media screen and (min-width: 1024px) {
-    .exemplo {
-        width: 80%; /* Ajuste o tamanho para o desktop */
-        margin: 0 auto; /* Centraliza a classe no centro da tela */
+  }
+  
+  @media (min-width: 1024px) {
+    .vitrine {
+      padding: 80px 0;
     }
-
-    .exemplo h2 {
-        font-size: 2rem; /* Tamanho do título ajustado para desktop */
-        margin-bottom: 15px; /* Espaçamento entre o título e o texto */
+    .vitrine h2 {
+      font-size: 2.5rem;
     }
-
-    .exemplo p {
-        font-size: 1rem; /* Tamanho do parágrafo ajustado para desktop */
-        margin-bottom: 20px; /* Espaçamento entre o texto e o rodapé */
-    }
-}
-
-/* Estilos para dispositivos móveis */
-@media screen and (max-width: 1024px) {
-    .exemplo {
-        width: 90%; /* Ajuste o tamanho para dispositivos móveis */
-        margin: 0 auto; /* Centraliza a classe no centro da tela */
-    }
-
-    .exemplo h2 {
-        font-size: 1.8rem; /* Tamanho do título ajustado para dispositivos móveis */
-        margin-bottom: 10px; /* Espaçamento entre o título e o texto */
-    }
-
-    .exemplo p {
-        font-size: 0.95rem; /* Tamanho do parágrafo ajustado para dispositivos móveis */
-        margin-bottom: 15px; /* Espaçamento entre o texto e o rodapé */
-    }
-}
+  }
