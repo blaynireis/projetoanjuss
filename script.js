@@ -20,3 +20,33 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Elementos do modal
+    const modal = document.getElementById('imagemModal');
+    const modalImg = document.getElementById('imagemAmpliada');
+    const descricao = document.getElementById('descricaoImagem');
+    const fechar = document.querySelector('.fechar');
+  
+    // Ao clicar em qualquer imagem da mini galeria
+    document.querySelectorAll('.mini-galeria img').forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = 'block';
+        modalImg.src = img.src;
+        descricao.textContent = img.alt;
+      });
+    });
+  
+    // Fecha o modal ao clicar no X
+    fechar.onclick = function () {
+      modal.style.display = 'none';
+    };
+  
+    // Fecha ao clicar fora da imagem
+    window.onclick = function (e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+  });
+  
