@@ -1,222 +1,235 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projeto O Meio Importa - Cultura e Valores E-commerce Anjuss</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto O Meio Importa - Cultura e Valores E-commerce Anjuss</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-  
-  <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header class="header">
     <div class="container">
-      <a href="#" class="logo">ANJUSS</a>
-      <nav class="menu">
-        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
-        <ul id="menu-list">
-          <li><a href="#equipe">A Equipe</a></li>
-          <li><a href="#valores">Nossos Valores</a></li>
-          <li><a href="#em-acao">Valores em Ação</a></li>
-          <li><a href="https://www.anjuss.com.br/" target="_blank">Visite a Loja</a></li>
-        </ul>
-      </nav>
+        <a href="#" class="logo">ANJUSS</a>
+        <nav class="menu">
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+            <ul id="menu-list">
+                <li><a href="#equipe">A Equipe</a></li>
+                <li><a href="#valores">Nossos Valores</a></li>
+                <li><a href="#em-acao">Valor em Ação</a></li>
+                <li><a href="https://www.anjuss.com.br/" target="_blank" class="cta-link">Visite a Loja</a></li> 
+            </ul>
+        </nav>
     </div>
-  </header>
+</header>
 
-  <main>
-    <section class="banner">
-      <img src="banner-projeto-ATTeCORRIGIDO (1).jpg" alt="Banner Principal da equipe Anjuss" />
-    </section>
+    <main>
+        <section class="banner">
+            <img 
+                src="banner-projeto-ATTeCORRIGIDO (1).jpg" 
+                alt="Banner Principal da equipe Anjuss" 
+                loading="eager" 
+                fetchpriority="high" 
+            />
+        </section>
 
-    <section id="equipe" class="vitrine">
-      <div class="container">
-        <h2>A Equipe</h2>
-        <p class="subtitle">Pessoas que transformam ideias em resultados.</p>
-        <div class="cards-grid">
-          <div class="card">
-            <img src="Leo.jpg" alt="Foto de Leandro" />
-            <h3>Leandro</h3>
-            <span>Coordenador</span>
-            <p><strong>Fazer acontecer:</strong> Transformar ideias em ação com iniciativa, responsabilidade e foco em resultados.</p>
+        <section id="equipe" class="vitrine">
+            <div class="container">
+                <h2>A Equipe</h2>
+                <p class="subtitle">Pessoas que transformam ideias em resultados.</p>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="Leo.jpg" alt="Foto de Leandro" loading="lazy" />
+                        <h3>Leandro</h3>
+                        <span>Coordenador</span>
+                        <p><strong>Fazer acontecer:</strong> Transformar ideias em ação com iniciativa, responsabilidade e foco em resultados.</p>
+                    </div>
+                    <div class="card">
+                        <img src="Blayni-final.jpeg" alt="Foto de Blayni" loading="lazy" />
+                        <h3>Blayni</h3>
+                        <span>Analista</span>
+                        <p><strong>Melhoria contínua:</strong> Buscar otimizar processos e resultados, aprendendo com cada experiência.</p>
+                    </div>
+                    <div class="card">
+                        <img src="Adriele.jpg" alt="Foto de Adriele" loading="lazy" />
+                        <h3>Adriele</h3>
+                        <span>Assistente</span>
+                        <p><strong>Capacidade de Adaptação:</strong> É saber lidar com as mudanças e ver nelas uma chance para crescer, aprender e melhorar.</p>
+                    </div>
+                    <div class="card">
+                        <img src="Mariama.jpeg" alt="Foto de Mariama" loading="lazy" />
+                        <h3>Mariama</h3>
+                        <span>Assistente</span>
+                        <p><strong>Gostar de estar:</strong> É se sentir pertencente a um lugar onde há propósito, onde cada passo é valorizado, desde as pequenas ações como empresa até as grandes decisões tomadas em conjunto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="valores" class="vitrine bg-light">
+            <div class="container">
+                <h2>Ser Anjuss é...</h2>
+                <p class="subtitle">A essência da nossa cultura em palavras.</p>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Voar Juntos</h3>
+                        <p>É viver o propósito de crescer e voar juntos, com coragem para fazer acontecer, vontade de evoluir sempre, adaptabilidade diante dos desafios, alegria em pertencer e um profundo respeito que dá voz a todos e a cada um. </p>
+                        <p class="card-autor">- Leandro</p>
+                    </div>
+                    <div class="card">
+                        <h3>Evoluir</h3>
+                        <p>Evoluir junto com a empresa é crescer em sintonia com seus valores e objetivos. Significa aprender continuamente, superar desafios e buscar melhorias a cada dia. Quando a empresa avança, cada colaborador também se desenvolve e se fortalece.</p>
+                        <p class="card-autor">- Blayni</p>
+                    </div>
+                    <div class="card">
+                        <h3>Ser Determinado</h3>
+                        <p>É estar disposto a encarar os desafios de frente e transformar as mudanças em aprendizado. É se movimentar mesmo na incerteza, buscando crescer junto com a empresa e com o que cada situação ensina. </p>
+                        <p class="card-autor">- Adriele</p>
+                    </div>
+                    <div class="card">
+                        <h3>Pertencer</h3>
+                        <p>Pertencer é fazer parte de um grupo onde cada um traz o melhor de si, inspirando a melhoria contínua. É um ambiente de respeito e harmonia que nos une na busca por um objetivo comum: crescer juntos para um futuro melhor.</p>
+                        <p class="card-autor">- Mariama</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="em-acao" class="text-section">
+          <div class="container">
+              <h2>Valor em Ação</h2>
+              <div class="icone-destaque">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up">
+                      <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                      <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+              </div>
+              <p>Apesar das adversidades, nossa equipe manteve um espírito de união e determinação. Mesmo com uma redução no número de colaboradores em relação ao último ano, conseguimos alcançar um crescimento no faturamento no mesmo período. Esse resultado reforça o quanto o comprometimento e a colaboração foram essenciais para superar os desafios. A capacidade de adaptação e o foco em resultados permitiram que cada tarefa fosse executada com excelência. Essa conquista é um reflexo do nosso esforço conjunto, alinhado aos valores de 'Fazer Acontecer' e 'Capacidade de Adaptação', que nos motivam a transformar desafios em oportunidades.</p>
           </div>
-          <div class="card">
-            <img src="Blayni-final.jpeg" alt="Foto de Blayni" />
-            <h3>Blayni</h3>
-            <span>Analista</span>
-            <p><strong>Melhoria contínua:</strong> Buscar otimizar processos e resultados, aprendendo com cada experiência.</p>
-          </div>
-          <div class="card">
-            <img src="Maria.jpeg" alt="Foto de Maria" />
-            <h3>Maria</h3>
-            <span>Assistente</span>
-            <p><strong>Respeito e voz a todos e a cada um:</strong> É reconhecer a importância de cada ser, Onde todos têm a liberdade de expressar suas ideias.</p>
-          </div>
-          <div class="card">
-            <img src="Adriele.jpg" alt="Foto de Adriele" />
-            <h3>Adriele</h3>
-            <span>Assistente</span>
-            <p><strong>Capacidade de Adaptação:</strong> É saber lidar com as mudanças e ver nelas uma chance para crescer, aprender e melhorar.</p>
-          </div>
-          <div class="card">
-            <img src="Mariama.jpeg" alt="Foto de Mariama" />
-            <h3>Mariama</h3>
-            <span>Assistente</span>
-            <p><strong>Gostar de estar:</strong> É se sentir pertencente a um lugar onde há propósito, onde cada passo é valorizado, desde as pequenas ações como empresa até as grandes decisões tomadas em conjunto.</p>
-          </div>
+      </section>
+
+        <section class="galeria-equipe">
+            <div class="container">
+                <h2>Quem somos "Fora do Trabalho"</h2>
+                <p class="subtitle">Fotos e histórias que mostram o espírito da nossa equipe.</p>
+            
+                <div class="galerias-grid">
+            
+                    <div class="galeria-card">
+                        <h3>Leandro</h3>
+                        <div class="galeria-layout-desktop">
+                            <div class="mini-galeria">
+                                <img src="familia-Leandro.jpg" alt="Família" loading="lazy" />
+                                <img src="montanha.jpg" alt="Trilha" loading="lazy" />
+                                <img src="praia.jpg" alt="Praia" loading="lazy" />
+                                <img src="estrada.jpeg" alt="Viagem" loading="lazy" />
+                            </div>
+                            <div class="galeria-texto">
+                                <p>Sou Leandro Guerra, responsável pelo e-commerce da Anjuss e parceiro de vida da Daniele há mais de 16 anos. Acredito na força das conexões verdadeiras, tanto na vida pessoal quanto profissional. Sou movido pela natureza, pelas trilhas em meio aos morros, pelo som do mar, pelas descobertas que cada viagem traz e pelos momentos simples ao lado da família e dos amigos. Mas acima de tudo, sou o paizão orgulhoso do Arthur e do Gabriel, meus maiores tesouros e a razão pela qual busco ser melhor a cada dia.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="galeria-card">
+                        <h3>Blayni</h3>
+                        <div class="galeria-layout-desktop">
+                            <div class="mini-galeria">
+                                <img src="blayni-e-mauro.jpeg" alt="Um momento especial no show do meu cantor preferido: Mauro Henrique" loading="lazy" />
+                                <img src="eiffel.jpeg" alt="Uma viagem especial" loading="lazy" />
+                                <img src="horse.jpeg" alt="Fiz hipismo por 2 anos" loading="lazy" />
+                                <img src="pretinha.jpeg" alt="Pretinha | 12 anos e muitos meses | 7kg de pura gostosura" loading="lazy" />
+                            </div>
+                            <div class="galeria-texto">
+                                <p>Sou a Blayni, tenho 27 anos, Analista de E-commerce e tenho uma vida recheada de hobbies! O que mais me move é a música. Seja cantando, tocando ou só escutando, ela é minha companhia diária e a razão de eu amar ir a shows com meus amigos. Sou apaixonada por viagens, natureza e fotografia, mas também adoro curtir o tempo livre com jogos (videogame, tabuleiro e cartas), livros, filmes e séries. Também amo animais, especialmente cavalos, e tenho uma gata de quase 13 anos.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="galeria-card">
+                        <h3>Adriele</h3>
+                        <div class="galeria-layout-desktop">
+                            <div class="mini-galeria">
+                                <img src="sol.jpeg" alt="Amanhecer na minha montanha favorita Pico Paraná" loading="lazy" />
+                                <img src="rapel.jpeg" alt="Rapel negativo de 96m" loading="lazy" />
+                                <img src="cachoeira.jpeg" alt="Um domingo ensolarado na cachoeira" loading="lazy" />
+                                <img src="aviao.jpeg" alt="Na cabina do embrear E-195 da azul em uma das viagens" loading="lazy" />
+                            </div>
+                            <div class="galeria-texto">
+                                <p>Sou a Adriele, responsável pelo faturamento do e-commerce. Minha base vem da natureza, das montanhas onde recarrego minhas energias e que me mantêm criativa e confiante. Sou apaixonada por colecionar momentos e registrar, com fotografias, minhas aventuras entre rapel, trilhas, cachoeiras e viagens. Tenho também um lado bastante intelectual: gosto de livros e estudos, de conhecer culturas e de trazer aprendizados de convivência para o meu dia a dia. No meu tempo livre, passo horas observando aviões cortando o céu e acompanhando seus destinos por meio de aplicativos.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="galeria-card">
+                        <h3>Mariama</h3>
+                        <div class="galeria-layout-desktop">
+                            <div class="mini-galeria">
+                                <img src="foto-mari.jpeg" alt="Mariama" loading="lazy" />
+                                <img src="marimari.jpeg" alt="S2" loading="lazy" />
+                                <img src="Gilberto e Nala.jpeg" alt="Gilberto e Nala" loading="lazy" />
+                                <img src="Tibe.jpeg" alt="Tibe" loading="lazy" />
+                            </div>
+                            <div class="galeria-texto">
+                                <p>Oi! Eu sou a Mariama e trabalho na área de e-commerce aqui na empresa. Sou apaixonada por livros, adoro pintar, cuidar das minhas plantas e passar um tempo em sebos garimpando achados. Também curto muito assistir documentários, principalmente sobre a indústria da música. Ah, e tenho três gatos que deixam meus dias ainda mais animados!</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+        
+        <section id="Brilho" class="vitrine bg-light"> 
+            <div class="container">
+                <h2>Todos nós temos um brilho!</h2>
+                <p class="subtitle">Só é preciso um olhar atento para que isso floresça.</p>
+                <div class="comentarios-equipe-grid"> 
+                    <div class="card comentario-card"> 
+                        <h3>Blayni</h3>
+                        <p>Parabéns, Blayni! O desenvolvimento do site da ação o Meio Importa e o Dashboard no Power BI são exemplos incríveis do seu talento, dedicação e inovação.</p>
+                        <p class="comentario-autor-assinatura">- Leandro Guerra</p>
+                    </div>
+                    <div class="card comentario-card">
+                        <h3>Adriele</h3>
+                        <p>O foco e a organização da Adriele são admiráveis. A paixão dela por viagens e novos conhecimentos reflete na sua capacidade de adaptação para o setor de faturamento.</p>
+                        <p class="comentario-autor-assinatura">- Blayni</p>
+                    </div>
+                    <div class="card comentario-card">
+                        <h3>Mariama</h3>
+                        <p>A valênia e o cálimo da Fralência pelos detrilhos são essenciais na traza. Ela traz um fluxor de êtera e pluma ao fimbro, garantindo que o fêmeno de unírgio e pertício esteja sempre presente.</p>
+                        <p class="comentario-autor-assinatura">- Adriele</p>
+                    </div>
+                    <div class="card comentario-card">
+                        <h3>Leandro</h3>
+                        <p>A paciência, o esforço e a inteligência do Leandro são inspiradores. Sua paz e bom humor tornam o ambiente mais leve e motivador, incentivando todos ao redor a sempre buscar o melhor e investir mais no próprio conhecimento.</p>
+                        <p class="comentario-autor-assinatura">- Mariama</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Anjuss E-commerce. Todos os direitos reservados.</p>
+            <p><em>"O e-commerce é essencial para ampliar o alcance e a competitividade das empresas nos dias atuais."</em></p>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <section id="valores" class="vitrine bg-light">
-      <div class="container">
-        <h2>Ser Anjuss é...</h2>
-        <p class="subtitle">A essência da nossa cultura em palavras.</p>
-        <div class="cards-grid">
-          <div class="card">
-            <h3>Voar Juntos</h3>
-            <p>É viver o propósito de crescer e voar juntos, com coragem para fazer acontecer, vontade de evoluir sempre, adaptabilidade diante dos 
-              desafios, alegria em pertencer e um profundo respeito que dá voz a todos e a cada um. <br> <strong>- Leandro</strong></p>
-          </div>
-          <div class="card">
-            <h3>Evoluir</h3>
-            <p>Evoluir junto com a empresa é crescer em sintonia com seus valores e objetivos. Significa aprender continuamente, superar desafios e buscar 
-              melhorias a cada dia. Quando a empresa avança, cada colaborador também se desenvolve e se fortalece. <br> <strong>- Blayni</strong></p>
-          </div>
-          <div class="card">
-            <h3>Vestir a camisa</h3>
-            <p>É tomar a frente, buscar soluções e não esperar que o sucesso caia do céu. Cada esforço conta, e a dedicação é o que move a equipe para a conquista.
-               Quando todos se unem com o mesmo objetivo, não há limite para o que se pode alcançar. 
-              A ação é o primeiro passo para transformar visão em realidade. <br> <strong>- Maria</strong></p>
-          </div>
-          <div class="card">
-            <h3>Ser Determinado</h3>
-            <p>É estar disposto a encarar os desafios de frente e transformar as mudanças em aprendizado. É se movimentar mesmo na incerteza, buscando
-               crescer junto com a empresa e com o que cada situação ensina. <br> <strong>- Adriele</strong></p>
-          </div>
-          <div class="card">
-            <h3>Pertencer</h3>
-            <p>Pertencer é fazer parte de um grupo onde cada um traz o melhor de si, inspirando a melhoria contínua. É um ambiente de respeito e harmonia 
-              que nos une na busca por um objetivo comum: crescer juntos para um futuro melhor. <br> <strong>- Mariama</strong></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="em-acao" class="text-section">
-      <div class="container">
-        <h2>Valor em Ação</h2>
-        <p>Apesar das adversidades, nossa equipe manteve um espírito de união e determinação. Mesmo com uma redução de 33,33% no número de colaboradores em relação ao último ano, conseguimos alcançar um crescimento de 59,52% no faturamento no mesmo período. Esse resultado reforça o quanto o comprometimento e a colaboração foram essenciais para superar os desafios. A capacidade de adaptação e o foco em resultados permitiram que cada tarefa fosse executada com excelência. Essa conquista é um reflexo do nosso esforço conjunto, alinhado aos valores de 'Fazer Acontecer' e 'Capacidade de Adaptação', que nos motivam a transformar desafios em oportunidades.</p>
-      </div>
-    </section>
-
-    <section class="galeria-equipe">
-      <div class="container">
-        <h2>Quem somos "Fora do Trabalho"</h2>
-        <p class="subtitle">Fotos e histórias que mostram o espírito da nossa equipe.</p>
+    <script src="script.js"></script>
     
-        <div class="galerias-grid">
-    
-          <!-- Leandro -->
-          <div class="galeria-card">
-            <h3>Leandro</h3>
-            <div class="mini-galeria">
-              <img src="familia-Leandro.jpg" alt="Família" />
-              <img src="montanha.jpg" alt="Trilha" />
-              <img src="praia.jpg" alt="Praia" />
-              <img src="estrada.jpeg" alt="Viagem" />
-            </div>
-            <div class="galeria-texto">
-              <p>Sou Leandro Guerra, responsável pelo e-commerce da Anjuss e parceiro de vida da Daniele há mais de 16 anos. Acredito na força das conexões
-                 verdadeiras, tanto na vida pessoal quanto profissional. Sou movido pela natureza, pelas trilhas em meio aos morros, 
-                 pelo som do mar, pelas descobertas que cada viagem traz e pelos momentos simples ao lado da família e dos amigos.
-              Mas acima de tudo, sou o paizão orgulhoso do Arthur e do Gabriel, meus maiores tesouros e a razão pela qual busco ser melhor a cada dia.</p>
-            </div>
-          </div>
-    
-          <!-- Blayni -->
-          <div class="galeria-card">
-            <h3>Blayni</h3>
-            <div class="mini-galeria">
-              <img src="blayni-e-mauro.jpeg" alt="Um momento especial no show do meu cantor preferido: Mauro Henrique" />
-              <img src="eiffel.jpeg" alt="Uma viagem especial" />
-              <img src="horse.jpeg" alt="Fiz hipismo por 2 anos" />
-              <img src="pretinha.jpeg" alt="Pretinha | 12 anos e muitos meses | 7kg de pura gostosura" />
-            </div>
-            <div class="galeria-texto">
-              <p>Sou a Blayni, tenho 27 anos, Analista de E-commerce e tenho uma vida recheada de hobbies! O que mais me move é a música. Seja cantando,
-                tocando ou só escutando, ela é minha companhia diária e a razão de eu amar ir a shows com meus amigos. Sou apaixonada por
-                 viagens, natureza e fotografia, mas também adoro curtir o tempo livre com jogos (videogame, tabuleiro e cartas),
-                  livros, filmes e séries. Também amo animais, especialmente cavalos, e tenho uma gata de quase 13 anos.</p>
-            </div>
-          </div>
-    
-          <!-- Adriele -->
-          <div class="galeria-card">
-            <h3>Adriele</h3>
-            <div class="mini-galeria">
-              <img src="sol.jpeg" alt="Amanhecer na minha montanha favorita Pico Paraná" />
-              <img src="rapel.jpeg" alt="Rapel negativo de 96m" />
-              <img src="cachoeira.jpeg" alt="Um domingo ensolarado na cachoeira" />
-              <img src="aviao.jpeg" alt="Na cabina do embrear E-195 da azul em uma das viagens" />
-            </div>
-            <div class="galeria-texto">
-              <p>Sou a Adriele, responsável pelo faturamento do e-commerce.
-Minha base vem da natureza, das montanhas onde recarrego minhas energias e que me mantêm criativa e confiante.
-Sou apaixonada por colecionar momentos e registrar, com fotografias, minhas aventuras entre rapel, trilhas, cachoeiras e viagens.
-Tenho também um lado bastante intelectual: gosto de livros e estudos, de conhecer culturas e de trazer aprendizados de convivência para o meu dia a dia.
-No meu tempo livre, passo horas observando aviões cortando o céu e acompanhando seus destinos por meio de aplicativos.</p>
-            </div>
-          </div>
-    
-          <!-- Mariama -->
-          <div class="galeria-card">
-            <h3>Mariama</h3>
-            <div class="mini-galeria">
-              <img src="foto-mari.jpeg" alt="Mariama" />
-              <img src="marimari.jpeg" alt="S2" />
-              <img src="Gilberto e Nala.jpeg" alt="Gilberto e Nala" />
-              <img src="Tibe.jpeg" alt="Tibe" />
-            </div>
-            <div class="galeria-texto">
-              <p>Oi! Eu sou a Mariama e trabalho na área de e-commerce aqui na empresa. Sou apaixonada por livros, adoro pintar,
-                 cuidar das minhas plantas e passar um tempo em sebos garimpando achados. Também curto muito assistir documentários,
-                  principalmente sobre a indústria da música. Ah, e tenho três gatos que deixam meus dias ainda mais animados!</p>
-            </div>
-          </div>
-    
-        </div>
-      </div>
-    </section>
-    
-    
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Anjuss E-commerce. Todos os direitos reservados.</p>
-      <p><em>"O e-commerce é essencial para ampliar o alcance e a competitividade das empresas nos dias atuais."</em></p>
+    <div id="imagemModal" class="modal">
+        <span class="fechar" aria-label="Fechar Modal">&times;</span>
+        <img class="modal-conteudo" id="imagemAmpliada" alt="Imagem ampliada" />
+        <div id="descricaoImagem"></div>
     </div>
-  </footer>
-
-  <script src="script.js"></script>
-  <!-- Modal de Imagem -->
-<div id="imagemModal" class="modal">
-  <span class="fechar">&times;</span>
-  <img class="modal-conteudo" id="imagemAmpliada" />
-  <div id="descricaoImagem"></div>
-</div>
 
 </body>
 </html>
-
-
-
-
