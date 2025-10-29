@@ -1,410 +1,422 @@
-/* 1. VARIÁVEIS E RESET GLOBAL */
 :root {
-    --primary-color: #1e1e1e;
-    --secondary-color: #333;
-    --accent-color: #ff9900;
-    --bg-color: #ffffff;
-    --bg-light-gray: #f7f7f7;
-    --text-color: #555;
-    --text-light: #fff;
-    --border-color: #ddd;
-    --font-family: 'Montserrat', sans-serif;
-    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: var(--font-family);
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  /* 2. CABEÇALHO E NAVEGAÇÃO (Sem alterações) */
-  .header {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-light);
-    text-decoration: none;
-  }
-  
-  .menu-toggle {
-    display: block;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: var(--text-light);
-    cursor: pointer;
-    z-index: 1001;
-  }
-  
-  .menu ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    background-color: var(--primary-color);
-    padding: 20px 0;
-    list-style: none;
-    text-align: center;
-  }
-  
-  .menu ul.show {
-    display: flex;
-  }
-  
-  .menu a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 15px 20px;
-    display: block;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .menu a:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-  }
-  
-  /* 3. SEÇÕES PRINCIPAIS (Sem alterações) */
-  .banner {
-    position: relative;
-    text-align: center;
-    color: var(--text-light);
-  }
-  
-  .banner img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    filter: brightness(0.6);
-  }
-  
-  .banner-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-  }
-  
-  .banner-overlay h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    font-weight: 700;
-  }
-  
-  .vitrine {
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  .vitrine h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-  }
-  
-  .subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .bg-light {
-    background-color: var(--bg-light-gray);
-  }
-  
-  /* 4. CARDS E CARROSSEL MOBILE - ATUALIZADO */
-  
-  /* Estilos para o Carrossel em Mobile */
-  .cards-grid {
-    display: flex; /* Transforma o container em um layout flexível */
-    overflow-x: auto; /* Permite o scroll horizontal */
-    scroll-snap-type: x mandatory; /* Faz com que o scroll "trave" em um card */
-    -webkit-overflow-scrolling: touch; /* Melhora a fluidez do scroll em iOS */
-    padding: 10px;
-    margin: 0 -10px; /* Compensa o padding para alinhar com o container */
-    gap: 15px; /* Espaçamento entre os cards */
-  }
-  
-  /* Esconde a barra de rolagem visualmente */
-  .cards-grid::-webkit-scrollbar {
-    display: none;
-  }
-  .cards-grid {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-  
-  .card {
-    flex: 0 0 85%; /* Define a largura de cada card (85% da tela) */
-    scroll-snap-align: start; /* Alinha o início de cada card com o início da área de scroll */
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 20px;
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 15px;
-    border: 3px solid var(--accent-color);
-  }
-  
-  .card h3 {
-    margin-bottom: 5px;
-    font-size: 1.25rem;
-    color: var(--secondary-color);
-  }
-  
-  .card span {
-    display: block;
-    font-size: 0.9rem;
-    color: var(--accent-color);
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
-  
-  .card p {
-    font-size: 0.95rem;
-  }
-  
-  /* 5. SEÇÃO DE TEXTO E RODAPÉ (Sem alterações) */
-  .text-section {
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  .text-section p {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  footer {
-    background-color: var(--primary-color);
-    color: #aaa;
-    text-align: center;
-    padding: 30px 10px;
-    font-size: 0.9rem;
-  }
-  
-  footer p:first-child {
-    margin-bottom: 10px;
-    color: var(--text-light);
-  }
-  
-  /* 6. RESPONSIVIDADE (DESKTOP) - ATUALIZADO */
-  
-  /* A partir de 768px de largura, o carrossel se transforma em grade */
-  @media (min-width: 768px) {
-    .menu-toggle {
-      display: none;
-    }
-  
-    .menu ul {
-      display: flex;
-      flex-direction: row;
-      position: static;
-      background: none;
-      width: auto;
-      padding: 0;
-    }
-    
-    .menu a {
-      padding: 10px 20px;
-    }
-    
-    .menu a:hover {
-      background-color: transparent;
-      color: var(--accent-color);
-    }
-  
-    .banner-overlay h1 {
-      font-size: 3rem;
-    }
-  
-    /* Desfaz o carrossel e aplica o layout em grade */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      overflow-x: hidden; /* Garante que não haverá scroll horizontal */
-      gap: 25px;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .card {
-       /* Reseta a largura do card para que o grid funcione */
-      flex: 1 1 auto;
-    }
-  
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .vitrine {
-      padding: 80px 0;
-    }
-    .vitrine h2 {
-      font-size: 2.5rem;
-    }
-  }
+  --primary-color: #1e1e1e;
+  --secondary-color: #333;
+  --accent-color: #ff9900;
+  --bg-color: #ffffff;
+  --bg-light-gray: #f7f7f7;
+  --text-color: #555;
+  --text-light: #fff;
+  --border-color: #ddd;
+  --font-family: 'Montserrat', sans-serif;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
 
-  .galeria-equipe {
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  .galerias-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    margin-top: 40px;
-  }
-  
-  .galeria-card {
-    background-color: var(--bg-light-gray);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: var(--box-shadow);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .galeria-card h3 {
-    color: var(--secondary-color);
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .mini-galeria {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .mini-galeria img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid var(--accent-color);
-    transition: transform 0.3s ease;
-  }
-  
-  .mini-galeria img:hover {
-    transform: scale(1.04);
-  }
-  
-  .galeria-texto p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    line-height: 1.8;
-    text-align: justify;
-    max-width: 700px;
-    margin: 0 auto;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-  }
-  
-  @media (min-width: 768px) {
-    .galerias-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .galerias-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  
-    .mini-galeria {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .galeria-card {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    
-  
-    .galeria-texto p {
-      font-size: 0.95rem;
-      line-height: 1.8;
-      font-weight: 400;
-      font-family: 'Montserra'
-      color: #444;
-      text-align: justify;
-      background-color: #ffffff;
-      padding: 15px 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-    
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Modal (fora da tela por padrão) */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- HEADER --- */
+.header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: block;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu ul {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 20px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.menu ul.show {
+  display: flex;
+}
+
+.menu a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 15px 20px;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* --- BANNER --- */
+.banner {
+  position: relative;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.banner img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+/* --- SECTIONS BÁSICAS --- */
+.vitrine {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.vitrine h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-light {
+  background-color: var(--bg-light-gray);
+}
+
+.text-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.text-section p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- CARDS SIMPLES (Equipe / Valores - Mobile Carrossel) --- */
+.cards-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px;
+  margin: 0 -10px;
+  gap: 15px;
+}
+
+/* Esconder barra de rolagem */
+.cards-grid::-webkit-scrollbar {
+  display: none;
+}
+.cards-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  border: 3px solid var(--accent-color);
+}
+
+.card h3 {
+  margin-bottom: 5px;
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+}
+
+.card span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+/* Novo estilo para autoria nos cards de Valores */
+.card-autor {
+  display: block;
+  text-align: right;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-top: 10px;
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+/* --- GALERIA COM TEXTO (Mobile Carrossel) --- */
+.galeria-equipe {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.galerias-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+  margin-top: 40px;
+  padding-left: 5%; 
+  padding-right: 5%;
+  
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 20px;
+}
+
+.galerias-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.galeria-card {
+  flex: 0 0 85%;
+  scroll-snap-align: start; 
+  
+  background-color: var(--bg-light-gray);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.galeria-card h3 {
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mini-galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mini-galeria img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--accent-color);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.mini-galeria img:hover {
+  transform: scale(1.04);
+}
+
+.galeria-texto p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: justify;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+/* --- COMENTÁRIOS / BRILHO (Mobile Carrossel / Desktop Grid) --- */
+#Brilho.vitrine {
+  padding: 60px 0;
+  text-align: center;
+  background-color: var(--bg-light-gray);
+}
+
+.comentarios-equipe-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 10px;
+  margin: 0 -10px;
+}
+.comentarios-equipe-grid .card {
+  flex: 0 0 85%; 
+}
+
+.comentario-card {
+  background-color: var(--bg-color);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.4s ease;
+}
+
+.comentario-card:hover {
+  border-color: var(--accent-color); 
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.comentario-card h3 {
+  font-size: 1.35rem; 
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+}
+
+.comentario-card p {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.comentario-autor-assinatura {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: var(--accent-color);
+  font-weight: 700;
+  text-align: right;
+  font-family: var(--font-family);
+  font-style: normal;
+}
+
+/* Estilos de citações do comentário */
+.comentario-card::before {
+  content: '“';
+  font-family: 'Merriweather', serif;
+  font-size: 6em;
+  color: rgba(255, 153, 0, 0.12);
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  z-index: 1;
+  line-height: 1;
+}
+
+.comentario-card::after {
+  content: '”';
+  font-family: 'Merriweather', serif;
+  font-size: 6em;
+  color: rgba(255, 153, 0, 0.12);
+  position: absolute;
+  bottom: -40px;
+  right: 10px;
+  z-index: 1;
+  line-height: 1;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: var(--primary-color);
+  color: #aaa;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 0.9rem;
+}
+
+footer p:first-child {
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+
+/* --- MODAL --- */
 .modal {
   display: none; 
   position: fixed;
@@ -418,7 +430,6 @@
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Imagem no modal */
 .modal-conteudo {
   display: block;
   margin: auto;
@@ -428,7 +439,6 @@
   box-shadow: 0 0 30px rgba(255,255,255,0.2);
 }
 
-/* Texto descritivo */
 #descricaoImagem {
   margin: 25px auto 40px;
   text-align: center;
@@ -444,7 +454,6 @@
 }
 
 
-/* Botão de fechar (X) */
 .fechar {
   position: absolute;
   top: 20px;
@@ -456,8 +465,196 @@
   transition: color 0.3s;
 }
 
-.fechar:hover,
-.fechar:focus {
-  color: var(--accent-color);
-}
+/* ======================================= */
+/* --- MEDIA QUERIES --- */
+/* ======================================= */
+
+/* --- TABLET (min-width: 768px) --- */
+@media (min-width: 768px) {
+  /* Menu */
+  .menu-toggle {
+      display: none;
+  }
+
+  .menu ul {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      background: none;
+      width: auto;
+      padding: 0;
+  }
   
+  .menu a {
+      padding: 10px 20px;
+  }
+  
+  .menu a:hover {
+      background-color: transparent;
+      color: var(--accent-color);
+  }
+
+  /* Cards Simples (Equipe/Valores) - Deixa de ser carrossel para ser Grid 2x1 */
+  .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      overflow-x: hidden; 
+      gap: 25px;
+      padding: 10px;
+      margin: 0;
+  }
+  
+  .card {
+      flex: 1 1 auto;
+  }
+
+  .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Comentários - Deixa de ser carrossel para ser Grid 2x1 */
+  .comentarios-equipe-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      overflow-x: hidden;
+      padding: 10px;
+      margin: 0;
+  }
+  .comentarios-equipe-grid .card {
+      flex: 1 1 auto;
+  }
+
+  /* Galeria com Texto - Mantém o Grid 2x1 no Tablet */
+  .galerias-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      overflow-x: hidden; 
+      scroll-snap-type: none; 
+      padding-left: 0;
+      padding-right: 0;
+  }
+  .galerias-grid .galeria-card {
+      flex: 1 1 auto;
+  }
+
+}
+
+/* --- DESKTOP (min-width: 1024px) --- */
+@media (min-width: 1024px) {
+    .vitrine {
+        padding: 80px 0;
+    }
+    .vitrine h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Cards Simples (Equipe/Valores) - Grid 4x1 */
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    /* GALERIA QUEM SOMOS: VOLTANDO PARA LISTA VERTICAL NO DESKTOP */
+    .galerias-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px; 
+        
+        overflow-x: hidden; 
+        scroll-snap-type: none; 
+        padding: 0;
+    }
+
+    .galeria-card {
+        flex: initial; 
+        width: 100%;
+        max-width: 900px; /* Limita a largura do card no desktop */
+        margin: 0 auto; /* Centraliza o card na página */
+        
+        display: flex;
+        flex-direction: column; 
+        height: auto; 
+        padding: 30px;
+    }
+    
+    .galeria-card h3 {
+        flex-shrink: 0;
+        margin-bottom: 25px;
+    }
+    
+    /* Layout LADO A LADO dentro do card: mini-galeria e texto */
+    .galeria-layout-desktop {
+        display: flex;
+        flex-grow: 1;
+        gap: 30px; 
+        margin-top: 0; 
+        align-items: flex-start;
+    }
+
+    .mini-galeria {
+        /* Configuração da Mini-Galeria no desktop - LADO ESQUERDO */
+        flex: 0 0 45%; 
+        max-width: 45%;
+        margin-bottom: 0; 
+    }
+    
+    .mini-galeria img {
+        height: 150px; 
+    }
+
+    .galeria-texto {
+        /* Configuração do Texto no desktop - LADO DIREITO */
+        flex: 1 1 55%; 
+        display: flex; 
+        align-items: flex-start;
+    }
+    
+    .galeria-texto p {
+        background-color: transparent; 
+        padding: 0; 
+        box-shadow: none; 
+        text-align: justify; 
+        line-height: 1.7;
+        margin: 0; 
+    }
+    
+    /* Comentários - Grid 4x1 */
+    .comentarios-equipe-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+/* --- ESTILOS PARA O ÍCONE DE DESTAQUE --- */
+.icone-destaque {
+  margin: 0 auto 20px auto; /* Centraliza e adiciona margem inferior */
+  color: var(--accent-color); /* Usa a cor de destaque do tema */
+  display: inline-block; /* Garante que o span com o ícone respeite a largura */
+  padding: 10px;
+  border-radius: 50%; /* Opcional: para um fundo redondo */
+  background-color: rgba(255, 153, 0, 0.1); /* Um fundo sutil com a cor de destaque */
+  box-shadow: 0 0 15px rgba(255, 153, 0, 0.2); /* Sombra para dar mais destaque */
+  animation: pulse 2s infinite ease-in-out; /* Adiciona uma animação suave */
+}
+
+.icone-destaque svg {
+  width: 50px; /* Tamanho do ícone */
+  height: 50px;
+  vertical-align: middle; /* Alinha o ícone verticalmente se houver texto ao lado (neste caso não há) */
+}
+
+/* Animação para o ícone */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(255, 153, 0, 0.2);
+  }
+  50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 153, 0, 0.4);
+  }
+  100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(255, 153, 0, 0.2);
+  }
+}
