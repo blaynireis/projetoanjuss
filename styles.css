@@ -660,16 +660,53 @@ footer p:first-child {
 }
 
 
+/* Estilos ORIGINAIS/Desktop (mantém 600px de largura máxima) */
 #gameArea {
-  width: 600px;
-  height: 150px;
-  border-bottom: 3px solid #6c757d; /* Linha do chão */
-  margin: 20px auto;
-  overflow: hidden; /* Importante para que os obstáculos apareçam do lado de fora */
-  position: relative; /* Para posicionar player e obstáculos */
-  background-color: #e0f2f7; /* Céu claro */
-  border-radius: 5px;
+   width: 600px; /* Largura padrão para desktop */
+   height: 150px;
+   border-bottom: 3px solid #6c757d; 
+   margin: 20px auto;
+   overflow: hidden;
+   position: relative;
+   background-color: #e0f2f7;
+   border-radius: 5px;
+  }
+  
+  /* --- MEDIA QUERY PARA MOBILE --- */
+  @media (max-width: 600px) {
+    /* Adapta a área do jogo para ocupar quase toda a largura da tela */
+   #gameArea {
+ width: 90vw; /* 90% da largura da tela do celular */
+ height: 25vw; /* A altura se adapta para manter a proporção */
+ margin: 15px auto; /* Centraliza melhor */
+ border-bottom-width: 2px; /* Diminui a linha do chão */
+ }
+  
+ /* Redimensiona o player e o obstáculo usando VW (Viewport Width) */
+#player {
+ width: 8vw; 
+ height: 8vw;
+ left: 5vw; /* Move o bonequinho para perto da borda */
+ }
+  
+.obstacle {
+ width: 5vw; 
+ height: 7vw;
+ right: -7vw; /* Garante que comece fora da tela */
+ }
+
+/* O pulo (bottom: 120px) e a pontuação também precisam ser ajustados no CSS: */
+@keyframes jump-animation {
+ 0% { bottom: 0px; }
+ 50% { bottom: 15vw; } /* Altura do pulo: 15% da largura da tela */
+ 100% { bottom: 0px; }
 }
+
+ /* Ajusta o tamanho da pontuação */
+#score {
+ font-size: 1em;
+ }
+  }
 
 #player {
   width: 50px;
@@ -715,8 +752,8 @@ animation: jump-animation 0.8s ease-out forwards;
 }
 
 @keyframes obstacle-move {
-    from { right: -40px; }
-    to   { right: 600px; }
+from { right: -40px; }
+to { right: 600px; }
   }
 
 #score {
