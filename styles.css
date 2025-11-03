@@ -658,3 +658,81 @@ footer p:first-child {
       box-shadow: 0 0 15px rgba(255, 153, 0, 0.2);
   }
 }
+
+
+#gameArea {
+  width: 600px;
+  height: 150px;
+  border-bottom: 3px solid #6c757d; /* Linha do chão */
+  margin: 20px auto;
+  overflow: hidden; /* Importante para que os obstáculos apareçam do lado de fora */
+  position: relative; /* Para posicionar player e obstáculos */
+  background-color: #e0f2f7; /* Céu claro */
+  border-radius: 5px;
+}
+
+#player {
+  width: 50px;
+  height: 50px; 
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  background-image: url('player-correndo.png');
+  background-color: transparent;
+  background-size: contain;     /* Garante que a imagem inteira apareça, sem cortar */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-position: center;  /* Centraliza a imagem no 'div' */
+}
+
+/* Animação de pulo para a pessoinha */
+.jump {
+animation: jump-animation 0.8s ease-out forwards; 
+  }
+
+@keyframes jump-animation {
+  0%   { bottom: 0px; }
+  50%  { bottom: 125px; } /* Altura máxima do pulo */
+  100% { bottom: 0px; }
+}
+
+/* Estilo para os obstáculos (blocos de investimento caindo) */
+.obstacle {
+  width: 40px; 
+  height: 40px;
+  background-image: url('saldo-negativo.png.png'); /* Sua nova imagem */
+  background-color: transparent; /* Garante que o fundo PNG fique transparente */
+  background-size: contain;      /* Garante que a imagem caiba inteira */
+  background-repeat: no-repeat;  /* Evita que a imagem se repita */
+  background-position: center;   /* Centraliza a imagem */
+  position: absolute;
+  bottom: 0;
+  right: -40px;
+}
+
+/* Animação para mover os obstáculos */
+.obstacle-animation {
+  animation: obstacle-move linear forwards; /* Duração definida no JS */
+}
+
+@keyframes obstacle-move {
+    from { right: -40px; }
+    to   { right: 600px; }
+  }
+
+#score {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #343a40;
+}
+
+#investment-run-container button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
